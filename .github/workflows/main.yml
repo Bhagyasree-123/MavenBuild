@@ -40,10 +40,10 @@ jobs:
       - name: Invoke Jenkins Job for Deployment
         uses: appleboy/jenkins-action@master
         with:
-          url: ${{ secrets.JENKINS_URL }}  # Set your Jenkins URL in GitHub Secrets
-          user: ${{ secrets.JENKINS_USER }}  # Set your Jenkins username in GitHub Secrets
+          url: ${{ http://104.198.139.137:8080 }}  # Set your Jenkins URL in GitHub Secrets
+          user: "admin"  # Set your Jenkins username in GitHub Secrets
           token: ${{ secrets.JENKINS_TOKEN }}  # Set your Jenkins API token in GitHub Secrets
-          job: "your-jenkins-job-name"  # Replace with your Jenkins job name
+          job: "TomcatDeployment"  # Replace with your Jenkins job name
           parameters: |
             PARAM1=value1
             PARAM2=value2
