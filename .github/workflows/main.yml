@@ -44,7 +44,7 @@ jobs:
         with:
           url: "http://172.31.21.109:8080"  # Set your Jenkins URL in GitHub Secrets
           user: "admin"  # Set your Jenkins username in GitHub Secrets
-          token: ${{ secrets.JENKINS_TOKEN }}  # Set your Jenkins API token in GitHub Secrets
+          token: "118ed8604c694be467ef721a6dfc347707"  # Set your Jenkins API token in GitHub Secrets
           job: "TomcatDeployment"  # Replace with your Jenkins job name
           parameters: |
             PARAM1=value1
