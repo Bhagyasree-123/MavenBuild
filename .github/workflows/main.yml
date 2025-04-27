@@ -36,3 +36,14 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B package --file pom.xml
+
+      - name: Invoke Jenkins Job for Deployment
+        uses: appleboy/jenkins-action@master
+        with:
+          url: ${{ secrets.JENKINS_URL }}  # Set your Jenkins URL in GitHub Secrets
+          user: ${{ secrets.JENKINS_USER }}  # Set your Jenkins username in GitHub Secrets
+          token: ${{ secrets.JENKINS_TOKEN }}  # Set your Jenkins API token in GitHub Secrets
+          job: "your-jenkins-job-name"  # Replace with your Jenkins job name
+          parameters: |
+            PARAM1=value1
+            PARAM2=value2
